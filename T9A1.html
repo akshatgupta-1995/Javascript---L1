@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 9 - Ass 1</title>
+</head>
+<body>
+		Enter a String : <input type="string" name="str" id="str">
+		<br>
+		Enter a letter : <input type="string" name="let" id="let">
+		<button type="button" onclick="occurrence()">Click</button>
+	<div id="display">
+	</div>
+	<script>
+		function occurrence() {
+			str = document.getElementById("str").value;	// global
+			var x = str.split("");
+			var c = 0;
+			for(var i=0;i<x.length;i++)
+			{
+				var let = document.getElementById("let").value;	// local
+				if(let == x[i])
+				{
+					c++;
+				}
+			}
+
+			document.getElementById("display").innerHTML = "No. of occurrences : " + c;
+		}
+	</script>
+</body>
+</html>

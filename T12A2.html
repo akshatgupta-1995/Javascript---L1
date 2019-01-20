@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 12 - Ass 2</title>
+</head>
+<body>
+	<h4>See result in console</h4>
+	<button type="button" onclick="sorting()">Click</button>
+<script> 
+function sorting()
+{
+	//bubble sort
+	var items = [75,3,45,37,2,54,74,65,38,36,21,81,32,23,88];
+    var length = items.length;
+    for (var i = 0; i < length; i++) { 
+        for (var j = 0; j < (length - i - 1); j++) { 
+            if(items[j] > items[j+1]) {
+                var tmp = items[j];
+                items[j] = items[j+1];
+                items[j+1] = tmp; 
+            }
+        }        
+    }
+    console.log(items);
+// Insertion sort
+var arr = [75,3,45,37,2,54,74,65,38,36,21,81,32,23,88];
+  for (var i = 1; i < arr.length; i++) 
+  {
+    if (arr[i] < arr[0]) 
+    {
+      arr.unshift(arr.splice(i,1)[0]);
+    } 
+    else if (arr[i] > arr[i-1]) 
+    {
+      continue;
+    } 
+    else {
+      for (var j = 1; j < i; j++) {
+        if (arr[i] > arr[j-1] && arr[i] < arr[j]) 
+        {
+          arr.splice(j,0,arr.splice(i,1)[0]);
+        }
+      }
+    }
+  }
+  console.log(items);
+}
+</script>									 
+
+</body>
+</html>

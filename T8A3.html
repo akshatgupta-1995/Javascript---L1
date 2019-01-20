@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 8 - Ass 3</title>
+</head>
+<body>
+		<button onclick="add()">Click to add 2 numbers</button>
+		<div id="display"></div>
+		<script type="text/javascript">
+			function add() {
+			    var n1 = prompt("Enter Number 1: ");
+			    var n2 = prompt("Enter Number 2: ");
+			    if (n1 != null && n2 != null) {
+			    	if(!isNaN(n1) && !isNaN(n2))
+					{
+						document.getElementById("display").innerHTML = "Sum is : "+(parseInt(n1)+parseInt(n2));
+					} else {
+						document.getElementById("display").innerHTML = "Both should be numbers !!";
+					}
+			    }
+			}
+		</script>
+</body>
+</html>

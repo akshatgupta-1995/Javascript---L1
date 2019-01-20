@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 12 - Ass 1</title>
+</head>
+<body>
+<form>
+Select your favorite Color :
+<select id="dropdown">
+<option>Ironman</option>
+<option>Captain America</option>
+<option>Hulk</option>
+<option>Doctor Strange</option>
+<option>Black Panther</option>
+</select>
+<input type="button" onclick="countVaues()" value="Count and Output all items">
+</form>
+
+<script> 
+function countVaues()
+{
+var x=document.getElementById("dropdown");
+var count = "No. of items : ";
+var i;
+l=document.getElementById("dropdown").length;  
+count = count+l;
+for (i=0;i<x.length;i++)
+  {
+    count = count + "\n" + x.options[i].text;
+  }
+alert(count);
+}
+</script>									 
+
+</body>
+</html>

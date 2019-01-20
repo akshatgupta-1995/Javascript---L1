@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 8 - Ass 1</title>
+</head>
+<body>
+		<button onclick="displayAllDetails()">Click To See CD Details</button>
+		<div id="display"></div>
+		<script type="text/javascript">
+			function displayAllDetails() {
+			    var obj = {name : "Avengers : Infinity War", pub : "Marvel Studios", price : 99};
+			    var p = parseFloat(obj.price);
+			    p = parseFloat(p*(1-parseFloat((3/100))));
+			    p = parseFloat(p*(1+parseFloat((10/100)))).toFixed(2);
+			    var show = "<br>CD Name : "+obj.name+"<br>CD Publisher : "+obj.pub+"<br>CD Price : "+obj.price+"<br>CD Final Price(3% discount + 10% tax) : "+p;
+			    document.getElementById("display").innerHTML = show;	
+			}
+		</script>
+</body>
+</html>

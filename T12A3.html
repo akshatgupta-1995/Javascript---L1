@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 12 - Ass 3</title>
+</head>
+<body>
+		Enter name of 10 employees with Commas : <input type="string" name="str" id="str">
+		<br>
+		<button type="button" onclick="print()">Print</button>
+	<div id="display">
+	</div>
+<script> 
+
+			function print()
+			{ 
+				var str = document.getElementById("str").value; 
+				var arr = str.split(",");
+				var result = "";
+				for(var i=0;i<arr.length;i=i+2)
+				{
+					result = result + "<br>" +arr[i]; 
+				}
+				document.getElementById("display").innerHTML = result;
+		    }
+</script>									 
+
+</body>
+</html>

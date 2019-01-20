@@ -1,0 +1,21 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 14 - Ass 2</title>
+</head>
+<body>
+	<div id="display">
+		<h3>Open console to see output</h3>
+	</div>
+<script> 
+function is_Error(input) {
+   return input instanceof Error || toString.call(input) === '[object Error]';
+}
+
+console.log(is_Error(new Error('akshat')));
+console.log(is_Error(100));
+console.log(is_Error('akshat'));
+</script>									 
+
+</body>
+</html>

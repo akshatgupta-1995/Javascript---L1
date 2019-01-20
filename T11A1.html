@@ -1,0 +1,34 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 11 - Ass 1</title>
+</head>
+<body>
+		Enter a Numbers with Commas to multiply: <input type="string" name="str" id="str">
+		<br>
+		<button type="button" onclick="multi()">Click</button>
+	<div id="display">
+	</div>
+<script> 
+
+			function multi()
+			{ 
+				var str = document.getElementById("str").value; 
+				var arr = str.split(",");
+				var result = 1;
+				for(var i=0;i<3;i++)
+				{
+					result = result*parseFloat(arr[i]);
+				}
+
+				if(result<0)
+				{
+					alert("Sign is -");
+				}else{
+					document.getElementById("display").innerHTML = "Multipliction is : "+result; 
+				}
+		    }
+</script>									 
+
+</body>
+</html>

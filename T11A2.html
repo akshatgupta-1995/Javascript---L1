@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 11 - Ass 2</title>
+</head>
+<body>
+		Enter a Numbers with Commas to find greatest: <input type="string" name="str" id="str">
+		<br>
+		<button type="button" onclick="great()">Click</button>
+	<div id="display">
+	</div>
+<script> 
+
+			function great()
+			{ 
+				var str = document.getElementById("str").value; 
+				var arr = str.split(",");
+				arr = arr.sort();
+				var result = arr[arr.length - 1];
+				document.getElementById("display").innerHTML = "Largest is : "+result; 
+		    }
+</script>									 
+
+</body>
+</html>

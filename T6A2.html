@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>JS L1 - Training Ass - Topic 6 - Ass 2</title>
+    <script src="calculator.js"></script>
+</head>
+<body>
+    <p></p>
+        <form class="calcForm" name="calculator">
+            <input type="text" class="calcDisplay" id="display" />
+            <div class="rows">
+                <input type="button" class="btns" value="1" onclick="numInput('1')" />
+                <input type="button" class="btns" value="2" onclick="numInput('2')" />
+                <input type="button" class="btns" value="3" onclick="numInput('3')" />
+            </div>
+            <div class="rows">
+                <input type="button" class="btns" value="4" onclick="numInput('4')" />
+                <input type="button" class="btns" value="5" onclick="numInput('5')" />
+                <input type="button" class="btns" value="6" onclick="numInput('6')" />
+            </div>
+            <div class="rows">
+                <input type="button" class="btns" value="7" onclick="numInput('7')" />
+                <input type="button" class="btns" value="8" onclick="numInput('8')" />
+                <input type="button" class="btns" value="9" onclick="numInput('9')" />
+            </div>
+            <div class="rows">
+                <input type="button" class="btns" value="0" onclick="numInput('0')" />
+                <input type="button" class="btns" value="+" onclick="setOperation('add')" />
+                <input type="button" class="btns" value="-" onclick="setOperation('sub')" />
+            </div>
+            <div class="rows">
+                <input type="button" class="btns" value="*" onclick="setOperation('multi')" />
+                <input type="button" class="btns" value="÷" onclick="setOperation('divide')" />
+                <input type="button" class="btns" value="=" onclick="calculate()" />
+            </div>
+        </form>
+</body>
+</html>

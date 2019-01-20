@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 9 - Ass 2</title>
+</head>
+<body>
+		Enter a Numbers with Commas : <input type="string" name="str" id="str">
+		<br>
+		Enter a number to search : <input type="string" name="num" id="num">
+		<button type="button" onclick="find()">Click</button>
+	<div id="display">
+	</div>
+<script> 
+			function recursiveFunction(arr, x, start, end) { 				 
+				if (start > end) 
+					return false; 
+
+				var mid=Math.floor((start + end)/2); 
+
+				if (arr[mid]===x) 
+					return true; 
+					
+				if(arr[mid] > x) 
+					return recursiveFunction(arr, x, start, mid-1); 
+				else
+					return recursiveFunction(arr, x, mid+1, end); 
+			} 
+			function find()
+			{
+				var x = document.getElementById("num").value; 
+				var str = document.getElementById("str").value; 
+				var arr = str.split(",");
+				if (recursiveFunction(arr, x, 0, arr.length-1)) 
+					document.getElementById("display").innerHTML = "<b>Element found!</b><br>"; 
+				else 
+					document.getElementById("display").innerHTML = "<b>Element not found!</b>"; 
+		    }
+</script>									 
+
+</body>
+</html>

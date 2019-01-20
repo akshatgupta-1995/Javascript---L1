@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 7 - Ass 3</title>
+</head>
+<body>
+	Enter a number : <input type="number" name="num" id="num"><p></p>
+	<button type="button" onclick="getLastSeries()">CLICK TO COMBINE SERIES</button><p></p>
+	<div id="display2"></div>
+	<div id="display"></div>
+	<script>
+		function getLastSeries() {
+			var n = document.getElementById('num').value;
+			var ary1 = [];
+			for(var i=0;i<20;i++)
+			{
+				// filling the array with random numbers
+				ary1[i] = Math.floor(Math.random()*99) + 1;
+			}
+			document.getElementById('display2').innerHTML = "Original Array:- "+ary1.join(' - ');
+			if(n>20)
+			{
+				document.getElementById('display').innerHTML = "Array:- "+ary1.join(' ');
+			} else{
+				var a = [];
+				for(var j=0;j<n;j++)
+				{
+					a[j] = ary1[ary1.length - 1 - j];
+				}
+						document.getElementById('display').innerHTML = "Resultant Array:- "+a.join('-');
+			}			
+		}
+	</script>
+</body>
+</html>

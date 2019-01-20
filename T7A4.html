@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 7 - Ass 4</title>
+</head>
+<body>
+	Enter or Copy a URL : <input type="text" name="url" id="url"><p></p>
+	<button type="button" onclick="parseURL()">CLICK TO PARSE URL</button><p></p>
+	<p><b>Protocol : </b><span id="protocol"></span></p>
+	<p><b>Host : </b><span id="host"></span></p>
+	<p><b>Hostname : </b><span id="hostname"></span></p>
+	<p><b>Port : </b><span id="port"></span></p>
+	<p><b>Pathname : </b><span id="pathname"></span></p>
+	<p><b>Hash : </b><span id="hash"></span></p>
+	<p><b>Search : </b><span id="search"></span></p>
+	<p><b>Origin : </b><span id="origin"></span></p>
+	<script>
+		function parseURL() {
+			var parser = document.createElement('a');
+			parser.href = document.getElementById('url').value;
+			document.getElementById('protocol').innerHTML = parser.protocol;
+			document.getElementById('host').innerHTML = parser.host;
+			document.getElementById('hostname').innerHTML = parser.hostname;
+			document.getElementById('port').innerHTML = parser.port;
+			document.getElementById('pathname').innerHTML = parser.pathname;
+			document.getElementById('hash').innerHTML = parser.hash;
+			document.getElementById('search').innerHTML = parser.search;
+			document.getElementById('origin').innerHTML = parser.origin;
+
+		}
+	</script>
+</body>
+</html>

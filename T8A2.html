@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 8 - Ass 2</title>
+</head>
+<body>
+		<button onclick="sortKeys()">Click To Sort</button>
+		<h4>Open console to see the result</h4>
+		<script type="text/javascript">
+			function sortKeys() {		
+				var myObj = {
+				'd': 'deadpool 2',
+			    'c': 'captain america : civil war',
+			    'b': 'Black Panther',
+			    's': 'Spider-man : Homecoming',
+			    'a': 'avengers : infinty war',
+			    
+			  },
+			  keys = Object.keys(myObj),
+			  i, len = keys.length;
+
+			keys.sort();
+
+			for (i = 0; i < len; i++) {
+			  k = keys[i];
+			  console.log(k + ':' + myObj[k]);
+			}
+		}
+		</script>
+</body>
+</html>

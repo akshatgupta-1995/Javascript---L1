@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 7 - Ass 1</title>
+</head>
+<body>
+	<h3>Fibonacci Series:- </h3>
+	<button type="button" onclick="fibo()">CLICK TO VIEW FIBONACCI SERIES</button><p></p>
+	<div id="display"></div>
+	<script>
+		function fibo() {
+			var x =0;
+			var y = 1;
+			var z = 0;
+			var ary = [];
+			for(var i=0;i<100;i++)
+			{
+				z=x+y;
+				ary.push(z);
+				x=y;
+				y=z;
+			}
+			document.getElementById('display').innerHTML = ary.join(' - ');
+		}
+	</script>
+</body>
+</html>

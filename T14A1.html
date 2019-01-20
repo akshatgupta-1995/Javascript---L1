@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 14 - Ass 1</title>
+</head>
+<body>
+	Enter a dividend : <input type="number" name="str" id="divi">
+	Enter a divisor : <input type="number" name="str" id="divis">
+		<button type="button" onclick="divide()">DIVIDE</button>
+	<div id="display">
+	</div>
+<script> 
+
+			function divide()
+			{ 
+				  var n1 = document.getElementById("divi").value;
+				  var n2 = document.getElementById("divis").value;
+				  try { 
+				    if(n2 == 0) 
+				    	{
+				    		throw "Divided by Zero ERROR !!";
+				    	}
+				    	else{
+				    		document.getElementById("display").innerHTML = "Divison is: "+ (n1/n2);
+				    	}
+				  }
+				  catch(err) {
+				    document.getElementById("display").innerHTML = "Error: " + err + ".";
+				  }
+				
+		    }
+</script>									 
+
+</body>
+</html>

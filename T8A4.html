@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 8 - Ass 4</title>
+</head>
+<body>
+		<button onclick="color()">Click to chnge color</button>
+		<div id="display">
+			<p id="display2">My name is Akshat Gupta. I work in Wipro.</p>
+		</div>
+		<script type="text/javascript">
+			function color() {
+			    var n1 = prompt("Enter Background Color: ");
+			    var n2 = prompt("Enter Foreround Color: ");
+			    if (n1 != null && n2 != null) {
+						document.body.style.backgroundColor = n1;
+						document.getElementById("display2").style.backgroundColor = n2;
+			    }
+			}
+		</script>
+</body>
+</html>

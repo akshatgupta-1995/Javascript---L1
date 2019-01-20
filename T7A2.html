@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 7 - Ass 2</title>
+</head>
+<body>
+	<button type="button" onclick="combi()">CLICK TO COMBINE SERIES</button><p></p>
+	<div id="display"></div>
+	<script>
+		function combi() {
+			var ary1 = ['a','b','c','d'];
+			var ary2 = [1,2,3,4];
+			var ary3 = [];
+			var j=0;
+			var k=0;
+			for(var i=0;i<(ary1.length)*2;i++)
+			{
+				if(i%2==0)
+				{
+					ary3[i] = ary1[j];
+					j++;
+				}else{
+					ary3[i] = ary2[k];
+					k++;
+				}
+			}
+			document.getElementById('display').innerHTML = ary3.join(' ');
+		}
+	</script>
+</body>
+</html>

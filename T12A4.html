@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>JS L1 - Training Ass - Topic 12 - Ass 4</title>
+</head>
+<body>
+		Enter marks of 10 subjects with Commas : <input type="string" name="str" id="str">
+		<br>
+		<button type="button" onclick="avg()">Calculate Average</button>
+	<div id="display">
+	</div>
+<script> 
+
+			function avg()
+			{ 
+				var str = document.getElementById("str").value; 
+				var arr = str.split(",");
+				var sum = 0;
+				for(var i=0;i<arr.length;i++)
+				{
+					sum = parseFloat(parseFloat(sum) + parseFloat(arr[i])); 
+				}
+				document.getElementById("display").innerHTML = "Average is: "+ (sum/10);
+		    }
+</script>									 
+
+</body>
+</html>
